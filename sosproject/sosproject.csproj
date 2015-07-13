@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78350C74-06C2-49F0-9FF6-0679C7D23128}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>sosproject</RootNamespace>
+    <AssemblyName>sosproject</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FoodsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
+    <Compile Include="category.cs">
+      <DependentUpon>nhahang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="customer.cs">
+      <DependentUpon>nhahang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="food.cs">
+      <DependentUpon>nhahang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="nhahang.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nhahang.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="nhahang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nhahang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="nhahang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nhahang.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="order.cs">
+      <DependentUpon>nhahang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="orderdetail.cs">
+      <DependentUpon>nhahang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>nhahang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="table.cs">
+      <DependentUpon>nhahang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <DependentUpon>nhahang.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\back-end\css\ace-ie.min.css" />
+    <Content Include="Content\back-end\css\ace-responsive.css" />
+    <Content Include="Content\back-end\css\ace-skins.css" />
+    <Content Include="Content\back-end\css\ace.css" />
+    <Content Include="Content\back-end\css\bootstrap-editable.css" />
+    <Content Include="Content\back-end\css\bootstrap-responsive.css" />
+    <Content Include="Content\back-end\css\bootstrap-timepicker.css" />
+    <Content Include="Content\back-end\css\bootstrap.css" />
+    <Content Include="Content\back-end\css\chosen-sprite%402x.png" />
+    <Content Include="Content\back-end\css\chosen-sprite.png" />
+    <Content Include="Content\back-end\css\chosen.css" />
+    <Content Include="Content\back-end\css\colorbox.css" />
+    <Content Include="Content\back-end\css\colorpicker.css" />
+    <Content Include="Content\back-end\css\datepicker.css" />
+    <Content Include="Content\back-end\css\daterangepicker.css" />
+    <Content Include="Content\back-end\css\font-awesome-ie7.min.css" />
+    <Content Include="Content\back-end\css\font-awesome.css" />
+    <Content Include="Content\back-end\css\fullcalendar.css" />
+    <Content Include="Content\back-end\css\images\border.png" />
+    <Content Include="Content\back-end\css\images\controls.png" />
+    <Content Include="Content\back-end\css\images\loading.gif" />
+    <Content Include="Content\back-end\css\images\loading_background.png" />
+    <Content Include="Content\back-end\css\images\overlay.png" />
+    <Content Include="Content\back-end\css\img\alpha.png" />
+    <Content Include="Content\back-end\css\img\hue.png" />
+    <Content Include="Content\back-end\css\img\saturation.png" />
+    <Content Include="Content\back-end\css\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="Content\back-end\css\jquery.gritter.css" />
+    <Content Include="Content\back-end\css\prettify.css" />
+    <Content Include="Content\back-end\css\select2-spinner.gif" />
+    <Content Include="Content\back-end\css\select2.css" />
+    <Content Include="Content\back-end\css\select2.png" />
+    <Content Include="Content\back-end\css\select2x2.png" />
+    <Content Include="Content\back-end\css\style-custom.css" />
+    <Content Include="Content\back-end\font\fontawesome-webfont.svg" />
+    <Content Include="Content\back-end\img\clear.png.html" />
+    <Content Include="Content\back-end\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\back-end\img\glyphicons-halflings.png" />
+    <Content Include="Content\back-end\img\loading.gif.html" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\front-end\css\class-style.css" />
+    <Content Include="Content\front-end\css\font-awesome.min.css" />
+    <Content Include="Content\front-end\css\glyphicons-font.css" />
+    <Content Include="Content\front-end\css\perfect-scrollbar.min.css" />
+    <Content Include="Content\front-end\css\style.css" />
+    <Content Include="Content\front-end\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\front-end\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\front-end\images\pattern1.png" />
+    <Content Include="Content\front-end\images\pattern2.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\back-end\avatars\avatar.png" />
+    <Content Include="Images\back-end\avatars\avatar1.png" />
+    <Content Include="Images\back-end\avatars\avatar2.png" />
+    <Content Include="Images\back-end\avatars\avatar3.png" />
+    <Content Include="Images\back-end\avatars\avatar4.png" />
+    <Content Include="Images\back-end\avatars\avatar5.png" />
+    <Content Include="Images\back-end\avatars\profile-pic.jpg" />
+    <Content Include="Images\back-end\avatars\user.jpg" />
+    <Content Include="Images\front-end\banner.png" />
+    <Content Include="Images\front-end\food1.png" />
+    <Content Include="Images\front-end\logo-footer.png" />
+    <Content Include="Images\front-end\logo-top.png" />
+    <Content Include="Images\front-end\pasta_051.jpg" />
+    <Content Include="Scripts\back-end\%402x.%241.html" />
+    <Content Include="Scripts\back-end\1.10.2.html" />
+    <Content Include="Scripts\back-end\1.10.3.html" />
+    <Content Include="Scripts\back-end\1.3.1.html" />
+    <Content Include="Scripts\back-end\1.6.1.html" />
+    <Content Include="Scripts\back-end\1.9.4.html" />
+    <Content Include="Scripts\back-end\2.0.3.html" />
+    <Content Include="Scripts\back-end\4.0em.html" />
+    <Content Include="Scripts\back-end\a.chzn-single.html" />
+    <Content Include="Scripts\back-end\a.close.html" />
+    <Content Include="Scripts\back-end\ace-elements.js" />
+    <Content Include="Scripts\back-end\ace.js" />
+    <Content Include="Scripts\back-end\additional-methods.min.js" />
+    <Content Include="Scripts\back-end\autosize.destroy.html" />
+    <Content Include="Scripts\back-end\autosize.resize.html" />
+    <Content Include="Scripts\back-end\autosize.resizeIncludeStyle.html" />
+    <Content Include="Scripts\back-end\beforeactivate._change.html" />
+    <Content Include="Scripts\back-end\blur.inputlimiter.html" />
+    <Content Include="Scripts\back-end\blur.mask.html" />
+    <Content Include="Scripts\back-end\blur.validate-equalTo.html" />
+    <Content Include="Scripts\back-end\bootbox.min.js" />
+    <Content Include="Scripts\back-end\bootstrap-colorpicker.min.js" />
+    <Content Include="Scripts\back-end\bootstrap-tag.min.js" />
+    <Content Include="Scripts\back-end\bootstrap-wysiwyg.min.js" />
+    <Content Include="Scripts\back-end\bootstrap.js" />
+    <Content Include="Scripts\back-end\change.ace_inner_call.html" />
+    <Content Include="Scripts\back-end\change.DT.html" />
+    <Content Include="Scripts\back-end\change.select2.html" />
+    <Content Include="Scripts\back-end\change._change.html" />
+    <Content Include="Scripts\back-end\chosen.jquery.min.js" />
+    <Content Include="Scripts\back-end\click.affix.data-api.html" />
+    <Content Include="Scripts\back-end\click.alert.data-api.html" />
+    <Content Include="Scripts\back-end\click.button.data-api.html" />
+    <Content Include="Scripts\back-end\click.carousel.data-api.html" />
+    <Content Include="Scripts\back-end\click.collapse.data-api.html" />
+    <Content Include="Scripts\back-end\click.dismiss.modal.html" />
+    <Content Include="Scripts\back-end\click.dropdown.data-api.html" />
+    <Content Include="Scripts\back-end\click.DT.html" />
+    <Content Include="Scripts\back-end\click.modal.data-api.html" />
+    <Content Include="Scripts\back-end\click.tab.data-api.html" />
+    <Content Include="Scripts\back-end\click._change.html" />
+    <Content Include="Scripts\back-end\click._submit keypress._submit.html" />
+    <Content Include="Scripts\back-end\date-time\2.0.0.html" />
+    <Content Include="Scripts\back-end\date-time\blur.timepicker.html" />
+    <Content Include="Scripts\back-end\date-time\bootstrap-datepicker.min.js" />
+    <Content Include="Scripts\back-end\date-time\bootstrap-timepicker.min.js" />
+    <Content Include="Scripts\back-end\date-time\button.applyBtn.html" />
+    <Content Include="Scripts\back-end\date-time\button.clearBtn.html" />
+    <Content Include="Scripts\back-end\date-time\changeTime.timepicker.html" />
+    <Content Include="Scripts\back-end\date-time\click.timepicker.html" />
+    <Content Include="Scripts\back-end\date-time\daterangepicker.min.js" />
+    <Content Include="Scripts\back-end\date-time\focus.timepicker.html" />
+    <Content Include="Scripts\back-end\date-time\hide.timepicker.html" />
+    <Content Include="Scripts\back-end\date-time\input.bootstrap-timepicker-hour.html" />
+    <Content Include="Scripts\back-end\date-time\input.bootstrap-timepicker-meridian.html" />
+    <Content Include="Scripts\back-end\date-time\input.bootstrap-timepicker-minute.html" />
+    <Content Include="Scripts\back-end\date-time\input.bootstrap-timepicker-second.html" />
+    <Content Include="Scripts\back-end\date-time\keydown.timepicker.html" />
+    <Content Include="Scripts\back-end\date-time\mm\dd\yyyy.html" />
+    <Content Include="Scripts\back-end\date-time\moment.min.js" />
+    <Content Include="Scripts\back-end\date-time\mousedown.timepicker.html" />
+    <Content Include="Scripts\back-end\date-time\select.monthselect.html" />
+    <Content Include="Scripts\back-end\date-time\select.yearselect.html" />
+    <Content Include="Scripts\back-end\date-time\show.timepicker.html" />
+    <Content Include="Scripts\back-end\date-time\span.bootstrap-timepicker-hour.html" />
+    <Content Include="Scripts\back-end\date-time\span.bootstrap-timepicker-meridian.html" />
+    <Content Include="Scripts\back-end\date-time\span.bootstrap-timepicker-minute.html" />
+    <Content Include="Scripts\back-end\date-time\span.bootstrap-timepicker-second.html" />
+    <Content Include="Scripts\back-end\date-time\td.available.html" />
+    <Content Include="Scripts\back-end\date-time\tfoot th.today.html" />
+    <Content Include="Scripts\back-end\ddd M\d.html" />
+    <Content Include="Scripts\back-end\dddd M\d.html" />
+    <Content Include="Scripts\back-end\div.chzn-drop.html" />
+    <Content Include="Scripts\back-end\div.chzn-search.html" />
+    <Content Include="Scripts\back-end\div.dataTables_filter.html" />
+    <Content Include="Scripts\back-end\div.fc-day-content div.html" />
+    <Content Include="Scripts\back-end\div.fc-event-time.html" />
+    <Content Include="Scripts\back-end\div.fc-event-title.html" />
+    <Content Include="Scripts\back-end\div.ui-draggable-iframeFix.html" />
+    <Content Include="Scripts\back-end\excanvas.min.js" />
+    <Content Include="Scripts\back-end\flot\0.8.1.html" />
+    <Content Include="Scripts\back-end\flot\jquery.flot.min.js" />
+    <Content Include="Scripts\back-end\flot\jquery.flot.pie.min.js" />
+    <Content Include="Scripts\back-end\flot\jquery.flot.resize.min.js" />
+    <Content Include="Scripts\back-end\focus.mask.html" />
+    <Content Include="Scripts\back-end\focus.typeahead.data-api.html" />
+    <Content Include="Scripts\back-end\focusin.modal.html" />
+    <Content Include="Scripts\back-end\fuelux\button.btn-next.html" />
+    <Content Include="Scripts\back-end\fuelux\button.btn-prev.html" />
+    <Content Include="Scripts\back-end\fuelux\data\fuelux.tree-sampledata.js" />
+    <Content Include="Scripts\back-end\fuelux\fuelux.spinner.min.js" />
+    <Content Include="Scripts\back-end\fuelux\fuelux.tree.min.js" />
+    <Content Include="Scripts\back-end\fuelux\fuelux.wizard.min.js" />
+    <Content Include="Scripts\back-end\fuelux\li.complete.html" />
+    <Content Include="Scripts\back-end\fuelux\mousedown.spinner.data-api.html" />
+    <Content Include="Scripts\back-end\fuelux\mousedown.wizard.data-api.html" />
+    <Content Include="Scripts\back-end\fuelux\span.badge.html" />
+    <Content Include="Scripts\back-end\fullcalendar.min.js" />
+    <Content Include="Scripts\back-end\in.tag.html" />
+    <Content Include="Scripts\back-end\input.autosize keyup.autosize.html" />
+    <Content Include="Scripts\back-end\input.autosize.html" />
+    <Content Include="Scripts\back-end\input.select2-input.html" />
+    <Content Include="Scripts\back-end\invalid-form.validate.html" />
+    <Content Include="Scripts\back-end\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\back-end\jquery-2.0.3.min.js" />
+    <Content Include="Scripts\back-end\jquery-dataTables-bootstrap.js" />
+    <Content Include="Scripts\back-end\jquery-dataTables.js" />
+    <Content Include="Scripts\back-end\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Scripts\back-end\jquery.autosize-min.js" />
+    <Content Include="Scripts\back-end\jquery.colorbox-min.js" />
+    <Content Include="Scripts\back-end\jquery.easy-pie-chart.min.js" />
+    <Content Include="Scripts\back-end\jquery.gritter.min.js" />
+    <Content Include="Scripts\back-end\jquery.hotkeys.min.js" />
+    <Content Include="Scripts\back-end\jquery.inputlimiter.1.3.1.min.js" />
+    <Content Include="Scripts\back-end\jquery.knob.min.js" />
+    <Content Include="Scripts\back-end\jquery.maskedinput.min.js" />
+    <Content Include="Scripts\back-end\jquery.mobile.custom.min.js" />
+    <Content Include="Scripts\back-end\jquery.slimscroll.min.js" />
+    <Content Include="Scripts\back-end\jquery.sparkline.min.js" />
+    <Content Include="Scripts\back-end\jquery.ui.touch-punch.min.js" />
+    <Content Include="Scripts\back-end\jquery.validate.min.js" />
+    <Content Include="Scripts\back-end\keydown.dropdown.data-api.html" />
+    <Content Include="Scripts\back-end\keydown.mask.html" />
+    <Content Include="Scripts\back-end\keypress.DT.html" />
+    <Content Include="Scripts\back-end\keypress.inputlimiter.html" />
+    <Content Include="Scripts\back-end\keypress.mask.html" />
+    <Content Include="Scripts\back-end\keyup.dismiss.modal.html" />
+    <Content Include="Scripts\back-end\keyup.DT.html" />
+    <Content Include="Scripts\back-end\keyup.inputlimiter.html" />
+    <Content Include="Scripts\back-end\keyup.k.html" />
+    <Content Include="Scripts\back-end\lang-in.tag.html" />
+    <Content Include="Scripts\back-end\lang-uq.val.html" />
+    <Content Include="Scripts\back-end\li.active-result.html" />
+    <Content Include="Scripts\back-end\li.dropdown.html" />
+    <Content Include="Scripts\back-end\li.no-results.html" />
+    <Content Include="Scripts\back-end\li.search-choice.html" />
+    <Content Include="Scripts\back-end\li.search-field.html" />
+    <Content Include="Scripts\back-end\li.select2-more-results.html" />
+    <Content Include="Scripts\back-end\markdown\bootstrap-markdown.min.js" />
+    <Content Include="Scripts\back-end\markdown\click.markdown.data-api.html" />
+    <Content Include="Scripts\back-end\markdown\markdown.min.js" />
+    <Content Include="Scripts\back-end\markdown\URL\Link.html" />
+    <Content Include="Scripts\back-end\Microsoft.XMLDOM.html" />
+    <Content Include="Scripts\back-end\Microsoft.XMLHTTP.html" />
+    <Content Include="Scripts\back-end\mousemove.jqs.html" />
+    <Content Include="Scripts\back-end\mousemove.k mouseup.k keyup.k.html" />
+    <Content Include="Scripts\back-end\mousemove.k.html" />
+    <Content Include="Scripts\back-end\mouseup.k mousemove.k keyup.k.html" />
+    <Content Include="Scripts\back-end\mouseup.k.html" />
+    <Content Include="Scripts\back-end\Please enter a valid time in 12-hour am\pm format.html" />
+    <Content Include="Scripts\back-end\prettify.js" />
+    <Content Include="Scripts\back-end\propertychange.autosize.html" />
+    <Content Include="Scripts\back-end\propertychange.select2 DOMAttrModified.select2.html" />
+    <Content Include="Scripts\back-end\propertychange._change.html" />
+    <Content Include="Scripts\back-end\resize.autosize.html" />
+    <Content Include="Scripts\back-end\resize.jqs scroll.jqs.html" />
+    <Content Include="Scripts\back-end\scroll.affix.data-api.html" />
+    <Content Include="Scripts\back-end\scroll.droppable.html" />
+    <Content Include="Scripts\back-end\scroll.scroll-spy.data-api.html" />
+    <Content Include="Scripts\back-end\select2.min.js" />
+    <Content Include="Scripts\back-end\selectstart.DT.html" />
+    <Content Include="Scripts\back-end\selectstart.ui.html" />
+    <Content Include="Scripts\back-end\spin.min.js" />
+    <Content Include="Scripts\back-end\submit._submit.html" />
+    <Content Include="Scripts\back-end\th.fc-agenda-gutter.html" />
+    <Content Include="Scripts\back-end\th.fc-week-number.html" />
+    <Content Include="Scripts\back-end\touchend.k.html" />
+    <Content Include="Scripts\back-end\touchmove.k touchend.k.html" />
+    <Content Include="Scripts\back-end\touchmove.k.html" />
+    <Content Include="Scripts\back-end\ui.draggable.html" />
+    <Content Include="Scripts\back-end\ui.droppable.html" />
+    <Content Include="Scripts\back-end\ui.mouse.html" />
+    <Content Include="Scripts\back-end\ui.resizable.html" />
+    <Content Include="Scripts\back-end\ui.selectable.html" />
+    <Content Include="Scripts\back-end\ui.slider.html" />
+    <Content Include="Scripts\back-end\ui.sortable.html" />
+    <Content Include="Scripts\back-end\ul.chzn-choices.html" />
+    <Content Include="Scripts\back-end\ul.chzn-results.html" />
+    <Content Include="Scripts\back-end\uq.val.html" />
+    <Content Include="Scripts\back-end\x-editable\ace-editable.min.js" />
+    <Content Include="Scripts\back-end\x-editable\bootstrap-editable.min.js" />
+    <Content Include="Scripts\back-end\x-editable\change.editable.html" />
+    <Content Include="Scripts\back-end\x-editable\click.editable.html" />
+    <Content Include="Scripts\back-end\x-editable\div.editable-input.html" />
+    <Content Include="Scripts\back-end\x-editable\focus.datepicker.data-api click.datepicker.data-api.html" />
+    <Content Include="Scripts\back-end\x-editable\keydown.editable.html" />
+    <Content Include="Scripts\back-end\x-editable\keyup.editable.html" />
+    <Content Include="Scripts\back-end\x-editable\mm\dd\yyyy.html" />
+    <Content Include="Scripts\back-end\x-editable\Object.keys called on a non-object.html" />
+    <Content Include="Scripts\back-end\x-editable\save.internal.html" />
+    <Content Include="Scripts\back-end\x-editable\tfoot th.clear.html" />
+    <Content Include="Scripts\back-end\x-editable\tfoot th.today.html" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\back-end\font\fontawesome-webfont.woff" />
+    <Content Include="Content\back-end\font\fontawesome-webfont_2d2816fe.eot" />
+    <Content Include="Content\back-end\font\fontawesome-webfont_aea8981c.eot" />
+    <Content Include="Content\back-end\font\fontawesome-webfont_aea8981c.ttf" />
+    <Content Include="Content\back-end\font\fontawesome-webfont_aea8981c.woff" />
+    <Content Include="Content\front-end\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\front-end\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\front-end\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\front-end\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\front-end\fonts\FontAwesome.otf" />
+    <Content Include="Content\front-end\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\front-end\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\front-end\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\front-end\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\back_end_template.cshtml" />
+    <EntityDeploy Include="nhahang.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>nhahang.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="nhahang.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>nhahang.edmx</DependentUpon>
+      <LastGenOutput>nhahang.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="nhahang.edmx.diagram">
+      <DependentUpon>nhahang.edmx</DependentUpon>
+    </Content>
+    <Content Include="nhahang.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>nhahang.edmx</DependentUpon>
+      <LastGenOutput>nhahang.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\Admin\Views\Category\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Foods\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Foods\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Foods\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Foods\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Foods\Index.cshtml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\front-end\jquery-1.11.3.js" />
+    <Content Include="Scripts\front-end\jquery-style.js" />
+    <Content Include="Scripts\front-end\perfect-scrollbar.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3550</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12897/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

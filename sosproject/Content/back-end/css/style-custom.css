@@ -1,0 +1,9 @@
+.nav-list > li .submenu > li > a, .page-content .page-header:first-child h1, .breadcrumb > li > a, .table-bordered, .help-inline, .form-horizontal .control-label, .breadcrumb > li {
+    font-family: Arial,tahoma;
+}
+.dataTables_wrapper .row-fluid:first-child{
+    background-color: white;
+}
+.table-bordered th, .table-bordered td{
+    text-align: center;
+}

@@ -1,0 +1,67 @@
+﻿@model sosproject.food
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/back_end_template.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>food</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.foodname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foodname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contents)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contents)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.foodimage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foodimage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.category.categoryname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.category.categoryname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.foodid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

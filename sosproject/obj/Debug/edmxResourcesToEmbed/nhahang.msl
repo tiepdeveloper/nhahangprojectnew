@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="nhahangModelStoreContainer" CdmEntityContainer="nhahangEntities">
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="nhahangModel.category">
+        <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+          <ScalarProperty Name="categoryname" ColumnName="categoryname" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="nhahangModel.customer">
+        <MappingFragment StoreEntitySet="customer">
+          <ScalarProperty Name="customerid" ColumnName="customerid" />
+          <ScalarProperty Name="customername" ColumnName="customername" />
+          <ScalarProperty Name="phonenumber" ColumnName="phonenumber" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="foods">
+      <EntityTypeMapping TypeName="nhahangModel.food">
+        <MappingFragment StoreEntitySet="foods">
+          <ScalarProperty Name="foodid" ColumnName="foodid" />
+          <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+          <ScalarProperty Name="foodname" ColumnName="foodname" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="contents" ColumnName="contents" />
+          <ScalarProperty Name="foodimage" ColumnName="foodimage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orderdetails">
+      <EntityTypeMapping TypeName="nhahangModel.orderdetail">
+        <MappingFragment StoreEntitySet="orderdetails">
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
+          <ScalarProperty Name="foodid" ColumnName="foodid" />
+          <ScalarProperty Name="daubepid" ColumnName="daubepid" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="unitcost" ColumnName="unitcost" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders">
+      <EntityTypeMapping TypeName="nhahangModel.order">
+        <MappingFragment StoreEntitySet="orders">
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="tableid" ColumnName="tableid" />
+          <ScalarProperty Name="orderdate" ColumnName="orderdate" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="customerid" ColumnName="customerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="nhahangModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tables">
+      <EntityTypeMapping TypeName="nhahangModel.table">
+        <MappingFragment StoreEntitySet="tables">
+          <ScalarProperty Name="tableid" ColumnName="tableid" />
+          <ScalarProperty Name="tablename" ColumnName="tablename" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="seatnums" ColumnName="seatnums" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="nhahangModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="permission" ColumnName="permission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

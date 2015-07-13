@@ -1,0 +1,758 @@
+body{
+    color: white;
+    font-family: Arial,Tahoma;
+}
+#header-top{
+	min-height: 101px;
+	background-color: #000;
+}
+#logo-header-top{
+	padding-top: 9px;
+}
+#menu{
+	box-sizing: border-box;
+	text-align: center;
+    vertical-align: text-top;
+}
+#menu-top-mobile {
+    margin-top: -5px;
+    padding: 18px;
+    text-align: center;
+    width: 230px;
+}
+#khung-menu-sxs{
+    margin-top: -45px;
+}
+#menu-top-md{
+    margin-top: -6px;
+}
+#khung-menu-md{
+    margin-top: -18px;
+}
+#bg-menu-top {
+    background-color: #bc2626;
+    min-height: 44px;
+    z-index: -1;
+    border-bottom: 1px solid #480000;
+    border-left: 1px solid #480000;
+    border-right: 1px solid #480000;
+}
+#bg-menu-bottom {
+    background-color: #2e2a26;
+    margin-top: -7px;
+    min-height: 49px;
+    position: relative;
+    width: 100%;
+    z-index: -3;
+}
+#intro-text {
+    font-size: 21px;
+    margin-top: 28px;
+    text-align: center;
+}
+#menu-shadow {
+    box-shadow: 0 0 4px #000;
+    height: 100%;
+    opacity: 1;
+    padding-bottom: 1px;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+/* menu item */
+#menu-item{
+    list-style: none;
+    display: inline-block;
+    padding-bottom: 11px;
+    margin-top: -44px;
+}
+.banner-khung{
+    margin-left: -30px;
+    margin-right: -30px;
+}
+#menu-item > a{
+    
+}
+#menu-item > a > li{
+    float: left;
+    color: white;
+    padding: 16px 17px;
+}
+#menu-item > a > li.active,#menu-item > a:hover > li{
+    color: red;
+    background-color: white;
+}
+#body-content{
+    background-color: #edeae6;
+    min-height: 200px;
+    color: black;
+}
+#khung-listing-thuc-an{
+    padding-top: 12px;
+    display: inline-block;
+}
+#khung-listing-thuc-an > a {
+    display: inline-block;
+    float: left;
+}
+a{
+    text-decoration: none;
+}
+a:hover > .khung-thuc-an > .tieu-de-thuc-an, a:hover > .khung-thuc-an > .so-nguoi-xem, a:hover > .khung-thuc-an > .gia-tien{
+    color: #5cb85c;
+}
+.khung-thuc-an{
+    text-align: center;
+}
+.tieu-de-thuc-an{
+    color: #000;
+    padding-top: 2px;
+}
+.khung-anh-thuc-an,.tieu-de-thuc-an,.so-nguoi-xem,.gia-tien{
+    height: auto;
+    width: 100%;
+    float: left;
+}
+.so-nguoi-xem,.gia-tien{
+    color: #5c5c5c;
+}
+.radius-food-img{
+    border-radius: 5px;
+}
+#footer-contact > .line-footer > a > i {
+    color: #d1d1d1;
+    float: left;
+    font-size: 30px;
+    text-align: center;
+    width: calc(100% / 2);
+}
+#footer-contact > .line-footer > a:hover > i{
+    color: #bc2626;
+}
+#footer{
+    min-height: 200px;
+    background-color: #333;
+}
+#logo-footer{
+    float: left;
+    width: 82px;
+    position: relative;
+}
+#footer-top, #footer-intro{
+    display: inline-block;
+}
+#footer-contact{
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 5px;
+    text-align: center;
+    min-height: 20px;
+}
+#intro {
+    float: left;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: left;
+    margin-bottom: 13px;
+    margin-top: 10px;
+    width: 100%;
+}
+#title-logo{
+    float: left;
+    margin-left: 8px;
+    position: relative;
+}
+#number-phone{
+    font-weight: 800;
+}
+#name-nha-hang{
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 24px;
+}
+#slogan{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#footer-contact>div{
+    margin-top: 9px;
+}
+#contact-about-us-footer{
+    background-color: #252525;
+}
+#option-icon {
+    background-color: #ff5050;
+    color: white;
+    cursor: pointer;
+    display: block;
+    right: 0;
+    position: fixed;
+    text-align: center;
+}
+#option-full{
+    background-color: rgba(47, 47, 47, 0.93);
+    color: white;
+    display: none;
+    right: 0;
+    top: 0;
+    position: fixed;
+    text-align: left;
+    height: 100%;
+}
+#search {
+    background: transparent none repeat scroll 0 0;
+    border: 1px solid white;
+    border-radius: 7px;
+    color: white;
+    height: 27px;
+    margin-left: 3%;
+    margin-top: 8px;
+    text-align: center;
+    width: 92%;
+}
+#submit-search-quick {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    color: white;
+    float: right;
+    font-size: 18px;
+    margin-left: -14%;
+    cursor: pointer;
+    margin-right: 6%;
+    margin-top: 11px;
+}
+#filter{
+    margin-left: 3%;
+}
+#title-danh-muc {
+    font-size: 15px;
+    margin-top: 7px;
+}
+#listing-filter {
+    width: 98%;
+    position:relative; 
+    margin-top:5px;
+    padding:0px;
+    word-wrap: break-word;
+}
+#content-category{
+    width: 100%;
+    height: 100%;
+}
+#listing-cate-khung{
+    list-style: none;
+    float: left;
+    margin: 0px;
+}
+.listing-category{
+    border-bottom: 1px solid #b8b8b8;
+    padding: 6px 0 6px 15px;
+    /*width: 100%;*/
+}
+/*scroll page */
+.always-visible.ps-container .ps-scrollbar-y-rail {
+    border-left: 1px solid #b8b8b8;
+    opacity: 0.6;
+    right: 0 !important;
+}
+.ps-container > .ps-scrollbar-y-rail{
+    width: 3px;
+}
+.ckbox-style{
+    background:transparent;
+}
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y{
+    background-color: #49ffab;
+    border-radius: 0px;
+    width: 3px;
+}
+.ps-container:hover > .ps-scrollbar-y-rail:hover{
+    background: transparent;
+}
+.ps-container:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y{
+    background-color: #49ffab;
+}
+#listing-filter{
+    border: 1px solid #b8b8b8;
+}
+/*checkbox style*/
+.checkbox {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 13px; margin-right:10px; line-height:18px;
+}
+.checkbox:hover{
+    color: #49ffab;
+}
+input[type=checkbox] {
+    display:none; 
+}
+.checkbox::before {
+    background-color: transparent;
+    border: 1px solid #d9d9d9;
+    color: #f3f3f3;
+    content: "";
+    display: inline-block;
+    margin-right: 8px;
+    min-height: 18px;
+    text-align: center;
+    vertical-align: middle;
+    width: 18px;
+}
+input[type=checkbox]:checked + .checkbox:before {
+    content: "\2713";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 15px;
+    color: #49ffab;
+}
+#search-cate-full {
+    background: transparent none repeat scroll 0 0;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 6px;
+    padding: 5px 0;
+    width: 99.5%;
+}
+#search-cate-full:hover{
+    color: #49ffab;
+}
+#login{
+    margin-top: 11px;
+}
+#icon-login{
+    float: left;
+}
+#icon-show-more{
+    float: right;
+}
+#login-btn {
+    float: left;
+    text-align: center;
+}
+#username,#password{
+    display: none;
+}
+#show-login {
+    border: 1px solid white;
+    display: inline-block;
+    padding: 6px;
+    cursor: pointer;
+    padding: 6px;
+    background: rgba(73, 255, 171, 0.36) none repeat scroll 0 0;
+    width: 98%;
+}
+.input-login {
+    background: transparent none repeat scroll 0 0;
+    float: left;
+    padding: 6px 0;
+}
+#login > #username > input, #login > #password > input {
+    color: white;
+}
+#food-icon > i{
+    font-size: 20px;
+}
+#food-icon > .badge {
+    float: right;
+    margin-left: 6px;
+    padding: 3px 4px;
+}
+#header-menu-mini > .badge{
+    padding: 3px 4px;
+    margin-left: 6px;
+}
+#food-icon {
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+    display: none;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    font-size: 23px;
+    padding: 5px;
+    top: 30px;
+}
+#food-full {
+    background-color: white;
+    color: black;
+    display: none;
+    left: 0;
+    margin-top: 30px;
+    min-height: 175px;
+    position: fixed;
+    text-align: left;
+    top: 0;
+    -webkit-box-shadow: 3px 3px 1px -1px rgba(0,0,0,0.12);
+    -moz-box-shadow: 3px 3px 1px -1px rgba(0,0,0,0.12);
+    box-shadow: 3px 3px 1px -1px rgba(0,0,0,0.12);
+}
+#header-menu-mini{
+    background-color: #5cb85c;
+    color: white;
+    font-size: 19px;
+    min-height: 25px;
+    padding-top: 5px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid #59b059;
+}
+table#table-mini-food{
+   border-collapse: collapse;
+   color: #218519;
+}
+table#table-mini-food > tbody > tr{
+    border-bottom: 1px solid #e5e5e5;
+}
+table#table-mini-food > tbody > tr > td{
+    border-right: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    padding: 6px 2px;
+}
+table#table-mini-food > tbody > tr > td:first-child{
+    border-left: 0px;
+}
+table#table-mini-food > tbody > tr > td:last-child{
+    border-right: 0px;
+}
+.so-luong-food {
+    padding: 0 8px !important;
+    cursor: pointer;
+}
+.note {
+    background-color: #428aca;
+    border: 1px solid #68a2d4;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 3px 3px 1px;
+}
+.delete {
+    background-color: #ff4d4d;
+    border: 1px solid #c97d7d;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 3px 4px 2px 3px;
+}
+.so-luong-food, .note-food, .delelte-food{
+    text-align: center;
+}
+.delelte-food{
+    padding-right: 5px;
+}
+.active-note{
+    background-color: #6fff69;
+    border: 1px solid #afd8ad;
+}
+.dat-ban{
+    width: 100%;
+}
+#dat-ban-btn {
+    background-color: #59ae59;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 5px 17px;
+}
+#dat-ban-btn:hover{
+    background-color: #62c662;
+    color: #edeae6;
+}
+#dat-ban {
+    padding: 9px 0;
+    width: 100%;
+}
+#dat-ban > span {
+    font-size: 14px;
+}
+#light-box{
+    display: none;
+}
+#bg-light-box {
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#so-luong-change {
+    background: white none repeat scroll 0 0;
+    border: 1px solid #edeae6;
+    border-radius: 3px;
+    display: none;
+    height: 63px;
+    left: 25%;
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    width: 50%;
+}
+.change-number {
+    float: left;
+    margin-left: 5%;
+    margin-top: 10px;
+    text-align: center;
+    width: 90%;
+}
+.btn-change {
+    background-color: #59ae59;
+    border: 1px solid #afd8ad;
+    cursor: pointer;
+    float: left;
+    margin-left: 5%;
+    margin-top: 7px;
+    color: white;
+    width: 91.9%;
+}
+#note-change {
+    background: white none repeat scroll 0 0;
+    border: 1px solid #edeae6;
+    border-radius: 3px;
+    display: none;
+    height: 153px;
+    left: 5%;
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    width: 90%;
+}
+.area-note {
+    float: left;
+    margin-left: 5%;
+    margin-top: 13px;
+    min-height: 100px;
+    width: 90%;
+}
+#tintuc-content {
+    display: inline-block;
+    padding: 7px 0;
+    width: 100%;
+}
+#feature-image {
+    display: inline-block;
+    width: 48%;
+    float: left;
+}
+#tin-tuc {
+    float: right;
+    width: 50%;
+}
+@media (min-width: 320px){
+    #tin-tuc {
+        font-size: 13px;
+    }
+    #so-ban {
+        width: 33%;
+    }
+    #food-full{
+        width: 77%;
+    }
+    .input-login{
+        width: 47.3%;
+    }
+    #listing-filter{
+        height: 200px;
+    }
+    #option-full{
+        width: 72%;
+    }
+    #option-icon{
+        top: 30px;
+        padding: 5px;
+        font-size: 23px;
+        width: 35px;
+    }
+    #show-login{
+        width: 92%;
+    }
+    #login-btn{
+        width: 20%;
+        width: 77%;
+    }
+    #contact-about-us{
+        font-size: 11px;
+    }
+    .so-nguoi-xem,.gia-tien{
+        font-size: 12px;
+    }
+    .img-food{
+        width: 100%;
+    }
+    #footer{
+        padding: 15px 6px 0;
+    }
+    #menu{
+        padding-left:0;
+        padding-right: 0;
+    }
+    #khung-listing-thuc-an > a{
+        margin: 5px calc(10% / 4);
+        width: calc(90% / 2);
+    }
+}
+@media (min-width: 480px){
+    #tin-tuc {
+        font-size: 16px;
+    }
+    .area-note{
+        width: 91%;
+    }
+    #note-change {
+        top: 10%;
+    }
+    #food-full {
+        width: 414px;
+    }
+    #so-ban {
+        width: 61%;
+    }
+    #submit-search-quick{
+        margin-right: 3%;
+    }
+    #show-login {
+        width: 96%;
+    }
+    #login-btn {
+        width: 89%;
+    }
+    #khung-listing-thuc-an > a{
+        margin: 5px calc(10% / 6);
+        width: calc(90% / 3);
+    }
+    #content-category, #listing-filter{
+        width: 99%;
+    }
+    #contact-about-us{
+        font-size: 15px;
+    }
+    #footer-logo-intro{
+        text-align: center;
+    }
+    #footer-top, #footer-intro{
+        width: 60%;
+    }
+    #search{
+        width: 95%;
+    }
+    .input-login {
+        width: 48.8%;
+    }
+}
+@media (min-width: 768px){
+    #tin-tuc {
+        font-size: 17px;
+    }
+    #note-change{
+        width: 400px;
+        left: 24%;
+        height: 157px;
+    }
+    #show-login {
+        width: 97%;
+    }
+    #login-btn {
+        width: 93%;
+    }
+    #khung-listing-thuc-an > a{
+        margin: 5px calc(10% / 8);
+        width: calc(90% / 4);
+    }
+    #bg-menu-bottom{
+        margin-top: -46px;
+        border-top: 1px solid #000;
+        min-height: 104px;
+    }
+    #footer-top, #footer-intro {
+        float: left;
+        width: calc(100% / 2);
+    }
+    #intro{
+        margin-top:unset;
+    }
+    #footer-contact > div {
+        float: left;
+        width: calc(100% / 2);
+    }
+    #contact-about-us{
+        line-height: 29px;
+    }
+    #footer-contact>div.line-footer:first-child{
+        text-align: left;
+    }
+    .ps-container > .ps-scrollbar-y-rail{
+        width: 5px;
+    }
+    .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y{
+        width: 5px;
+    }
+    .input-login {
+        width: 49%;
+    }
+
+}
+@media (min-width: 783px){
+    #menu-left {
+        border-color: transparent #580000 #580000 transparent;
+        border-style: solid;
+        border-width: 9px;
+        margin-left: -18px;
+        position: relative;
+        width: 0;
+        float: left;
+    }
+    #menu-right {
+        border-color: transparent transparent #580000 #580000;
+        border-style: solid;
+        border-width: 9px;
+        float: right;
+        margin-right: -18px;
+        position: relative;
+        width: 0;
+    }
+}
+@media (min-width: 992px){
+    .input-login {
+        width: 48.7%;
+    }
+    #content-category, #listing-filter {
+        width: 98%;
+    }
+    #search-cate-full{
+        width: 98.5%;
+    }
+    #show-login{
+        width: 96.5%;
+    }
+    #login-btn {
+        width: 95%;
+    }
+    #so-luong-change{
+        width: 242px;
+        left: 40%;
+    }
+    #note-change{
+        left: 33%;
+    }
+}
+@media (min-width: 1200px){
+    #content-category, #listing-filter {
+        width: 99%;
+    }
+    #show-login {
+        width: 98%;
+    }
+    #search-cate-full {
+        width: 99.5%;
+    }
+    #search {
+        width: 96%;
+    }
+    #submit-search-quick{
+        margin-right: 2%;
+    }
+    .input-login {
+        width: 49.3%;
+    }
+}

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<sosproject.user>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/back_end_template.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+     
+        <th>
+            @Html.DisplayNameFor(model => model.fullname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.permission)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fullname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.permission)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.userid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.userid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.userid })
+        </td>
+    </tr>
+}
+
+</table>

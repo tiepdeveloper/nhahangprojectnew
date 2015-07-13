@@ -1,0 +1,64 @@
+﻿@model IEnumerable<sosproject.food>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/back_end_template.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.foodname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contents)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.foodimage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.category.categoryname)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.foodname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contents)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.foodimage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.category.categoryname)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.foodid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.foodid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.foodid })
+        </td>
+    </tr>
+}
+
+</table>

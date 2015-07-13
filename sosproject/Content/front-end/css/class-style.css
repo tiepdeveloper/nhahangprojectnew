@@ -1,0 +1,104 @@
+@import url('./glyphicons-font.css');
+@import url('./font-awesome.min.css');
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.full-width{
+	width: 100%;
+}
+.content-center{
+	width: 50%;
+    margin: 0 auto;
+}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: #777;
+  border-radius: 10px;
+}
+.badge:empty {
+  display: none;
+}
+.patern1{
+	background: url("../images/pattern1.png") repeat right top;
+}
+.patern2{
+	background: url("../images/pattern2.png") repeat right top;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+}
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.img-responsive{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+@media (min-width: 320px){
+	.hidden-sxs{
+		display: none;
+	}
+	.col-sxs-12{
+		width: 100%;
+		float: left;
+	}
+}
+@media (min-width: 480px){
+	/*#footer{
+		margin: 0 calc(10% / 2.5);
+	    width: calc(90% / 1);
+	}*/
+
+}
+@media (min-width: 768px){
+	.col-sm-6{
+		width: calc(100% / 2);
+		float: left;
+	}
+	.container {
+	    width: 750px;
+  	}
+	.hidden-sm{
+		display: none;
+	}
+	#logo-header-top.center-block{
+		margin-left:unset;
+	}
+	.display-sm-block{
+		display: block;
+	}
+}
+@media (min-width: 992px){
+	.display-md-block{
+		display: block;
+	}
+}
+@media (min-width: 1200px){
+	.container {
+        width: 960px;
+    }
+}

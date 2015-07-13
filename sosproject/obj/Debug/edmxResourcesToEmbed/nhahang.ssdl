@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="nhahangModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="categoryid" />
+    </Key>
+    <Property Name="categoryid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="categoryname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="status" Type="bit" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="customerid" />
+    </Key>
+    <Property Name="customerid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customername" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="phonenumber" Type="varchar" MaxLength="20" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="foods">
+    <Key>
+      <PropertyRef Name="foodid" />
+    </Key>
+    <Property Name="foodid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="categoryid" Type="int" Nullable="false" />
+    <Property Name="foodname" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="price" Type="float" Nullable="false" />
+    <Property Name="status" Type="bit" />
+    <Property Name="contents" Type="nvarchar" MaxLength="1000" />
+    <Property Name="foodimage" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="orderdetails">
+    <Key>
+      <PropertyRef Name="orderid" />
+      <PropertyRef Name="foodid" />
+    </Key>
+    <Property Name="orderid" Type="int" Nullable="false" />
+    <Property Name="foodid" Type="int" Nullable="false" />
+    <Property Name="daubepid" Type="int" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="unitcost" Type="float" Nullable="false" />
+    <Property Name="comment" Type="nvarchar" MaxLength="100" />
+    <Property Name="status" Type="bit" />
+  </EntityType>
+  <EntityType Name="orders">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="orderid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="int" Nullable="false" />
+    <Property Name="tableid" Type="int" Nullable="false" />
+    <Property Name="orderdate" Type="datetime" Nullable="false" />
+    <Property Name="status" Type="bit" />
+    <Property Name="customerid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tables">
+    <Key>
+      <PropertyRef Name="tableid" />
+    </Key>
+    <Property Name="tableid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tablename" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="status" Type="bit" />
+    <Property Name="seatnums" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="fullname" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="status" Type="bit" />
+    <Property Name="permission" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_foods_category">
+    <End Role="category" Type="Self.category" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="foods" Type="Self.foods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="categoryid" />
+      </Principal>
+      <Dependent Role="foods">
+        <PropertyRef Name="categoryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_orderdetails_foods">
+    <End Role="foods" Type="Self.foods" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="orderdetails" Type="Self.orderdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="foods">
+        <PropertyRef Name="foodid" />
+      </Principal>
+      <Dependent Role="orderdetails">
+        <PropertyRef Name="foodid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_orderdetails_orders">
+    <End Role="orders" Type="Self.orders" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="orderdetails" Type="Self.orderdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="orders">
+        <PropertyRef Name="orderid" />
+      </Principal>
+      <Dependent Role="orderdetails">
+        <PropertyRef Name="orderid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_orders_customer">
+    <End Role="customer" Type="Self.customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="orders" Type="Self.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="customerid" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="customerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_orders_tables">
+    <End Role="tables" Type="Self.tables" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="orders" Type="Self.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tables">
+        <PropertyRef Name="tableid" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="tableid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_orders_users">
+    <End Role="users" Type="Self.users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="orders" Type="Self.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="nhahangModelStoreContainer">
+    <EntitySet Name="category" EntityType="Self.category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customer" EntityType="Self.customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="foods" EntityType="Self.foods" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orderdetails" EntityType="Self.orderdetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orders" EntityType="Self.orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tables" EntityType="Self.tables" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_foods_category" Association="Self.FK_foods_category">
+      <End Role="category" EntitySet="category" />
+      <End Role="foods" EntitySet="foods" />
+    </AssociationSet>
+    <AssociationSet Name="FK_orderdetails_foods" Association="Self.FK_orderdetails_foods">
+      <End Role="foods" EntitySet="foods" />
+      <End Role="orderdetails" EntitySet="orderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_orderdetails_orders" Association="Self.FK_orderdetails_orders">
+      <End Role="orders" EntitySet="orders" />
+      <End Role="orderdetails" EntitySet="orderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_orders_customer" Association="Self.FK_orders_customer">
+      <End Role="customer" EntitySet="customer" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_orders_tables" Association="Self.FK_orders_tables">
+      <End Role="tables" EntitySet="tables" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_orders_users" Association="Self.FK_orders_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
